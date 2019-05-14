@@ -1,0 +1,70 @@
+#part, #maturity, #grade, #information, #story{
+  padding-top: 250px;
+  text-align:center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  opacity: 0.7;
+}
+
+#part {
+  margin-top: -70px;
+  background: url(../img/cow-shadow.png) no-repeat center top;
+  background-size: cover;
+}
+
+#part p, #maturity p, #grade p, #information p, #story p{
+  letter-spacing: 50pt;
+  width:fit-content;
+  margin: 0 auto;
+}
+
+#part p:hover, #maturity p:hover, #grade p:hover, #information p:hover, #story p:hover{
+  border-bottom-style: solid;
+  border-width: medium;
+  border-color: rgb(228,228,228);
+}
+
+#part:hover , #maturity:hover, #grade:hover,  #information:hover, #story:hover{
+  opacity: 1;
+  transition: 1s;
+}
+
+#maturity {
+  margin-top: 10px;
+  background: url(../img/fire-shadow.png) no-repeat center top;
+  background-size: cover;
+}
+
+#grade {
+  margin-top: 10px;
+  background: url(../img/beef-shadow.png) no-repeat center top;
+  background-size: cover;
+}
+
+#information {
+  margin-top: 10px;
+  background: url(../img/information-shadow.png) no-repeat center top;
+  background-size: cover;
+}
+
+#story {
+  margin-top: 10px;
+  background: url(../img/story-shadow.png) no-repeat center top;
+  background-size: cover;
+}
+.option {
+  width: 100%;
+  margin: 0px;
+}
+
+.text p {
+  color: rgb(228,228,228);
+  font-size: 80px;
+  font-weight: lighter;
+}
+
+.text a {
+  text-decoration: none;
+}

@@ -1,0 +1,81 @@
+#headerwrap {
+  margin-top: 0;
+  background-image: url(../img/cow-shadow.png);
+  background-size: cover;
+}
+
+#headerwrap h1 {
+  color: rgb(228,228,228);
+  font-size: 80px;
+  font-weight: lighter;
+  letter-spacing: 50pt;
+  width:fit-content;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+#cow-part {
+  background: url(../img/cow-part.jpg) no-repeat center top;
+  background-size: contain;
+  text-align:center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+}
+
+.text a {
+  text-decoration: none;
+}
+
+.text a > p{
+  color: rgb(228,228,228);
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+#rib-eye , #short-rib , #new-york , #filet , #t-bone , #sirloin , #chuck {
+  padding-top: 90px;
+  text-align:center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 250px;
+  min-width: 250px;
+  opacity: 0.8;
+}
+
+#rib-eye:hover , #short-rib:hover , #new-york:hover , #filet:hover , #t-bone:hover , #sirloin:hover , #chuck:hover {
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1.05, 1.05);
+}
+
+#rib-eye {
+  background: url(../img/part_ribeye.png) no-repeat center top;
+  background-size: 250px 250px;
+}
+
+#short-rib {
+  background: url(../img/part_littlesteak.png) no-repeat center top;
+  background-size: 250px 250px;
+}
+
+ #new-york {
+   background: url(../img/part_newyork.png) no-repeat center top;
+   background-size: 250px 250px;
+ }
+
+#filet {
+  background: url(../img/part_filet.png) no-repeat center top;
+  background-size: 250px 250px;
+}
+
+#t-bone {
+  background: url(../img/part_tbone.png) no-repeat center top;
+  background-size: 250px 250px;
+}
+
+#sirloin {
+  background: url(../img/part_sirloin.png) no-repeat center top;
+  background-size: 250px 250px;
+}
