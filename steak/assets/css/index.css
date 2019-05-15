@@ -18,6 +18,7 @@
   letter-spacing: 50pt;
   width:fit-content;
   margin: 0 auto;
+  padding-left: 60px;
 }
 
 #part p:hover, #maturity p:hover, #grade p:hover, #information p:hover, #story p:hover{
