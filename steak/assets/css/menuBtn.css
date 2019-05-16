@@ -1,0 +1,46 @@
+
+#back {
+  position: fixed;
+  bottom: 50%;
+  right: 10%;
+}
+
+#back span {
+  border-width: 1px;
+  border-color: black;
+  border-radius: 100%;
+  border-style: solid;
+  padding: 19px 5px;
+}
+
+#back a {
+  color: black;
+  text-decoration: none;
+}
+
+#back span:hover {
+  border-color: rgb(245, 68, 68);
+}
+
+#back :hover > a {
+  color: rgb(245, 68, 68);
+}
+
+.animation_pop {
+  animation-name: pop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-15px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+}

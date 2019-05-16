@@ -69,3 +69,27 @@
 .text a {
   text-decoration: none;
 }
+
+#headerwrap h1 {
+  font-weight: lighter;
+}
+
+.title_animation {
+  animation-name: twinkle,transform;
+  animation-duration: 5s;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transform {
+  100% {
+    transform: scale(1.1);
+  }
+}
