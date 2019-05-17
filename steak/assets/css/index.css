@@ -1,3 +1,35 @@
+#headerwrap {
+  padding-top: 180px;
+}
+
+#headerwrap h1 {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+#logo {
+  margin: 0 auto 30px auto;
+  border: solid white;
+  border-radius: 100%;
+  padding: 25px 10px 10px 10px;
+  border-width: 3px;
+  width: 180px;
+  height: 180px;
+  /* background: no-repeat center top;
+  background-image: url(../icon/web_icon_white.png);
+  background-size: cover; */
+}
+
+#logo span {
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#logo img {
+  width: inherit;
+}
+
 #part, #maturity, #grade, #information, #story{
   padding-top: 250px;
   text-align:center;
@@ -68,10 +100,6 @@
 
 .text a {
   text-decoration: none;
-}
-
-#headerwrap h1 {
-  font-weight: lighter;
 }
 
 .title_animation {

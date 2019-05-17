@@ -4,12 +4,49 @@
     background-size: cover;
   }
   
-  #headerwrap h1 {
-    color: rgb(228,228,228);
-    font-size: 80px;
-    font-weight: lighter;
-    letter-spacing: 50pt;
-    width:fit-content;
-    margin: 0 auto;
-    opacity: 0.8;
-  }
+#headerwrap h1 {
+  color: rgb(228,228,228);
+  font-size: 80px;
+  font-weight: lighter;
+  letter-spacing: 50pt;
+  width:fit-content;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+#US , #Japan , #Australia {
+ padding: 10px;
+}
+
+.inspect {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px; 
+}
+
+.card_header {
+  margin: 20px 0 15px 0;
+  padding-top: 40%;
+  background-image: url(../img/japan.png);
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: relative;
+  background-position: center center;
+  opacity: 0.8;
+}
+
+.card_header:hover {
+  opacity: 1;
+}
+
+.card_header span {
+  font-size: 30px;
+  
+  color:rgb(243, 241, 234);
+}
+
+.card_container {
+  margin: 10px 0 25px 0;
+}

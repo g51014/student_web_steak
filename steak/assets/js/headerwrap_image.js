@@ -2,7 +2,7 @@ var image = new Array();
 var index = 1;
 $(document).ready(() => {
     for(var i=0;i<5;i++){
-        image.push('../steak/assets/img/index-beef' + (i+1) + '.jpg');
+        image.push('../steak/assets/img/index-beef' + (i+1) + '-shadow.png');
     }
     setTimeout(() => $('#title').addClass('title_animation'),1000);
 });
