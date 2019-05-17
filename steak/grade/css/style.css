@@ -14,39 +14,121 @@
   opacity: 0.8;
 }
 
-#US , #Japan , #Australia {
- padding: 10px;
+.cards {
+ padding: 10px 25px 10px 25px;
+ opacity: 0.8;
+}
+
+#US_card_header {
+  background-image: url(../img/US.png);
+}
+
+#Japan_card_header {
+  background-image: url(../img/japan.png);
+}
+
+#Australia_card_header {
+  background-image: url(../img/australia.png);
 }
 
 .inspect {
   border-style: solid;
   border-color: black;
   border-width: 1px; 
+  border-radius: 15px;
 }
+
+/* #US:hover, #Japan:hover, #Australia:hover {
+  border-color: rgb(245, 68, 68);
+} */
 
 .card_header {
-  margin: 20px 0 15px 0;
-  padding-top: 40%;
-  background-image: url(../img/japan.png);
+  margin: 20px 0 50px 0;
+  padding-top: 50%;
   background-repeat: no-repeat;
-  min-height: 300px;
+  min-height: 50%;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-attachment: relative;
   background-position: center center;
-  opacity: 0.8;
 }
 
-.card_header:hover {
+.cards:hover {
   opacity: 1;
 }
 
 .card_header span {
   font-size: 30px;
-  
   color:rgb(243, 241, 234);
 }
 
 .card_container {
   margin: 10px 0 25px 0;
+}
+
+.card_container p {
+  letter-spacing: 3px;
+}
+
+.card_container button {
+  background: none;
+  border: 1px black solid;
+  width: 100%;
+  border-radius: 35px;
+}
+
+.card_container button:hover {
+  /* background-color: #2f2f2f; */
+  border-color:rgb(245, 68, 68); 
+}
+
+.card_container button:hover p {
+  color:rgb(245, 68, 68);
+}
+
+.card_article {
+  text-align: justify;
+  display: none;
+}
+
+.card_article > ul{
+  padding: 0;
+}
+
+.card_article > ul > li > p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.current_card {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.animation_flyout {
+  animation-duration: 1s;
+  animation-name: flyout;
+}
+
+@keyframes flyout {
+  0% {
+    /* transform: translateY(-10px); */
+    opacity: 0.8;
+  }
+  30% {
+    /* transform: translateY(-30px); */
+    opacity: 0.6;
+  }
+  60% {
+    /* transform: translateY(-50px); */
+    opacity: 0.4;
+  }
+  90% {
+    /* transform: translateY(-70px); */
+    opacity: 0.2;
+  }
+  100% {
+    /* transform: translateY(-100px); */
+    opacity: 0;
+  }
 }
