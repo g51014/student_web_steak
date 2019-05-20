@@ -13,3 +13,51 @@
     margin: 0 auto;
     opacity: 0.8;
   }
+
+  #topic {
+    margin-top: 50px;
+    background-image: url(../img/cook_topic_background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  #topic-option {
+    list-style: none;
+    padding-left: 50%;
+    padding-top: 80px;
+  }
+
+  #topic-option > li {
+    margin: 0 0 35px 0;
+  }
+
+  #topic-option > li > button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px black none;
+    outline: none;
+    text-align: center;
+  }
+
+  #topic-option > li > button > p {
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+
+  #topic-option > li > button :hover {
+    /* transform: scale(1.3);
+    transition: 0.5s;
+    color:black; */
+    border-bottom: 1px solid black;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+  #topic-option > li > button :active{
+    animation: twinkle 0.1s;
+  }
