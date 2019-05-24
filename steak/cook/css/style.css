@@ -58,8 +58,15 @@
     display: inline-block;
   }
 
-  #description > img {
-    display: none;
+  #description > button {
+    border: 0 none;
+    background-color: inherit;
+    outline: none;
+    padding: 0;
+  }
+
+  #image > img {
+    display: block;
     margin: 30px auto 0 auto;
   }
 
@@ -69,7 +76,7 @@
     color:gray;
   }
 
-  .fa-sort-down:hover , .fa-sort-up:hover {
+  .fa-sort-down:hover , .fa-caret-up:hover {
     color: black;
     transition: 0.5s;
     transform: translateY(-3px);

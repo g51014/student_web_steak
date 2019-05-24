@@ -29,8 +29,11 @@ var topicOption = () => {
 }
 
 var content = (id) => {
-    return "<p>"+COOK[id].content+"</p>"+"<a href = '#description'><i class='fa fa-sort-down sort-down-icon'></i></a>"+
-    "<img src ='"+COOK[id].img+"'>";
+    return "<p>"+COOK[id].content+"</p>"+"<button><i id='"+ id +"' class='fa fa-sort-down sort-down-icon'></i></button>";
+}
+
+var image = (id) => {
+    return "<img src ='"+COOK[id].img+"'>";
 }
 
 $(document).ready(
@@ -41,16 +44,56 @@ $(document).ready(
 
 $(document).on('click',
     (clickEvenData) => {
-        var target = {
-            option: clickEvenData.originalEvent.path[1].id,
-            icon: clickEvenData.originalEvent.path[0].className,
+        const even = 
+        clickEvenData.originalEvent.path[1].id.includes('option') ? {type:'option',data:clickEvenData.originalEvent.path[1].id} :
+        //up/down
+        clickEvenData.originalEvent.path[0].className.split(' ')[2].includes('icon')? {type:clickEvenData.originalEvent.path[0].className.split(' ')[2].split('-')[1],data:clickEvenData.originalEvent.path[0].id} : {type:'others'};
+        const EVEN_MAP = {
+            option: (data) => {
+                if(data.includes('option')) {
+                        const option = parseInt(data.split('option-')[1]);
+                        if (!!option || option === 0) {
+                            $('#description').empty();
+                            $('#image').empty();
+                            $('#description').append(this.content(option));
+                        } 
+                    }
+            },
+            up: (data) => {
+                $('#'+data).removeClass();
+                $('#'+data).addClass('fa fa-sort-down sort-down-icon');
+                $('#image').empty();
+            },
+            down: (data) => {
+                $('#'+data).removeClass();
+                $('#'+data).addClass('fa fa-caret-up sort-up-icon');
+                $('#image').append(this.image(data));
+            }
         };
-        console.log(clickEvenData.originalEvent.path[0].className);
-        if(target.option.includes('option')) {
-            target.option = parseInt(target.option.split('option-')[1]);
-            $('#description').empty();
-            $('#description').append(this.content(target.option));
-        }
+        EVEN_MAP[even.type](even.data);
+
+        // var target = {
+        //     option: clickEvenData.originalEvent.path[1].id, // 0-4
+        //     icon: clickEvenData.originalEvent.path[0].className, 
+        // };
+        // if(target.option.includes('option')) {
+        //     const option = parseInt(target.option.split('option-')[1]);
+        //     if (!!option || option === 0) {
+        //         $('#description').empty();
+        //         $('#description').append(this.content(option));
+        //     } 
+        // }
+        // // else if (!!target.icon) {
+        //     if(target.icon.split(' ')[2].split('-')[1].includes('up')) {
+               
+        //     }
+        //     if(target.icon.split(' ')[2].split('-')[1].includes('down')) {
+        //         $('#image').append(this.image());
+        //     }
+        // }
     }
 );
+
+
+
 
