@@ -12,6 +12,7 @@ const PROGRESS_BLOCK = {
     active: 'red' , 
     inactive: 'rgb(228, 227, 227)'
   },
+  opacity: 0.7,
   num: 6
 };
 
@@ -62,6 +63,7 @@ function setProgressBar(toggleBlock , blockNum) {
     var blockId = '#block' + i;
     var color = (i === toggleBlock) ? PROGRESS_BLOCK.color.active : PROGRESS_BLOCK.color.inactive;
     $(blockId).css('background-color', color);
+    $(blockId).css('opacity',PROGRESS_BLOCK.opacity);
   }
  
 }
