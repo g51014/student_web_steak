@@ -13,3 +13,50 @@
     margin: 0 auto;
     opacity: 0.8;
   }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+  }
+
+  #introduction{
+    max-width: 60%;
+  }
+
+  #introduction p{
+    font-size: 24px;
+    letter-spacing: 5px;
+    line-height: 36px;
+    word-wrap: break-word;
+    text-align: justify;
+  }
+
+  .animation_flyin {
+    animation-name: flyin;
+    animation-duration: 3s;
+  }
+
+  .animation_out {
+    animation-name: flyout;
+    animation-duration: 3s;
+  }
+
+  @keyframes flyin {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes flyout {
+    0% {
+      transform: translateY(-100px);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
