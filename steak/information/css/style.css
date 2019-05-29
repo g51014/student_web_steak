@@ -4,6 +4,11 @@
     background-size: cover;
   }
   
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+
   #headerwrap h1 {
     color: rgb(228,228,228);
     font-size: 80px;
@@ -13,3 +18,56 @@
     margin: 0 auto;
     opacity: 0.8;
   }
+
+  #Q-List , #A-List {
+    display: inline-flex;
+  }
+
+  #A-List {
+    max-width: 35%;
+  }
+
+  #A-List p {
+    line-height: 30px;
+    letter-spacing: 5px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  #Q-List ul ,#A-List ul {
+    padding: 0;
+    list-style: none;
+    text-align: justify;
+  }
+
+  #Q-List li {
+    margin: 0 auto 10px auto;
+  }
+
+  #Q-List li :hover {
+    color: rgb(245, 68, 68);
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  #Q-List li span, #A-List li span{
+    margin: 0 10px;
+  }
+
+  #Q-List ul > li > p {
+    font-size: 24px;
+    display: inline-block;
+    opacity: 0.8;
+    font-weight: lighter;
+  }
+
+.animation_emerge {
+  animation-name: emerge;
+  animation-duration: 3s;
+}
+
+@keyframes emerge {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
