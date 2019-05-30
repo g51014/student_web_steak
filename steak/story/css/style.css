@@ -1,6 +1,6 @@
 #headerwrap {
     margin-top: 0;
-    background-image: url(../../assets/img/story-shadow.png);
+    background-image: url(../img/story_shadow.png);
     background-size: cover;
   }
   
@@ -11,7 +11,6 @@
     letter-spacing: 50pt;
     width:fit-content;
     margin: 0 auto;
-    opacity: 0.8;
   }
 
   .gallery {
@@ -20,15 +19,20 @@
   }
 
   #introduction{
-    max-width: 60%;
+    position: relative;
+    max-width: 100%;
+    display: none;
   }
 
   #introduction p{
-    font-size: 24px;
-    letter-spacing: 5px;
-    line-height: 36px;
+    font-size: 30px;
+    letter-spacing: 15px;
+    line-height: 48px;
     word-wrap: break-word;
     text-align: justify;
+    color: rgb(228,228,228);
+    font-weight: lighter;
+    opacity: 0.8;
   }
 
   .animation_flyin {
@@ -36,7 +40,7 @@
     animation-duration: 3s;
   }
 
-  .animation_out {
+  .animation_flyout {
     animation-name: flyout;
     animation-duration: 3s;
   }
@@ -53,10 +57,14 @@
 
   @keyframes flyout {
     0% {
-      transform: translateY(-100px);
       opacity: 1;
     }
+    10%{
+      transform: translateX(-30px);
+      opacity: 0.8;
+    }
     100% {
+      transform: translateX(100px);
       opacity: 0;
     }
   }
